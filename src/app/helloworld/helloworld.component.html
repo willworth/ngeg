@@ -1,0 +1,23 @@
+<div class="outer">
+    <h1>Hello world! </h1>
+    <p>I am writing this guide as an angular app.  The idea is that you <a href="https://github.com/willworth/ngeg">clone the repo</a> and look at the source code as you read through.</p>
+    <p>You'll need to have the angular cli installed!</p>
+    <p>Everything is component based, and so, although it's not the entry point of the app, to see the related code for the first examples, you need to navigate to src/app/helloworld.  This text is in the html file.  There's also the .ts file, which has (almost) all code, a styles file, and a spec file, which is for testing.</p>
+
+<p>If you want to do someting more interesting than a static page, you want dynamic content, so let's start with a variable. If you want to interpolate a variable from the component, you use <em> double curly brackets</em>. The following example shows "Will" inserted as the dev's name.  (See helloworld.component.ts)</p>
+    <p>The developer of this example app is {{developer}}.</p>
+    <p>We also have an array of strings, which we iterate over using *ngFor, which is a  <a href="https://angular.io/guide/structural-directives">structural directive</a>, as opposed to an <a href="https://angular.io/guide/attribute-directives">attribute directive</a>. Structural directives modify structure- any sort of DOM manipulation.</p>
+
+    <blockquote>
+       " Structural directives are responsible for HTML layout. They shape or reshape the DOM's structure, typically by adding, removing, or manipulating elements."
+    </blockquote>
+<p>So we are looping over our array.  Again, all this is pulled in from the associated typescript file:</p>
+    <ul>
+        <li *ngFor="let name of names">Hello {{ name }}</li>
+        </ul>
+    
+    
+
+
+</div>
+
