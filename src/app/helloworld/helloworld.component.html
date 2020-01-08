@@ -16,8 +16,14 @@
         <li *ngFor="let name of names">Hello {{ name }}</li>
         </ul>
     
-    
-
+    <p>I've just created a new component using "ng g c receptivechild". Given our component driven design, we're going to want to pass data down to child components, so that's our next example.  This is like passing props in react. To pass values to a component we use the bracket [] syntax in our template.
+    </p>
+    <ul>
+        <li *ngFor="let callthiswhatever of beatles">
+            <app-receptivechild [beatle]="callthiswhatever"></app-receptivechild>
+        
+        </li>
+        </ul>
 
 </div>
 

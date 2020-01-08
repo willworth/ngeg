@@ -1,0 +1,19 @@
+<div class="formexample">
+    <h2>This is the formexample component.</h2>
+    <p> Here, we're going to grab input from a form. As before, there's html, and then some special syntax, which allows us to pick it up in the code.</p>
+<p>All we're doing is taking the input and doing a console.log, but what matters is that we are binding the inputs using the # symbol: " input name="thing" id="thing" #newthing".  This means we have access to the contents of that form element within the component.  One important note:  in this example it's binding to the HTMLInputElement object, so we need to use "whatever.value" to get the value, not just "whatever"...</p>
+<p>If you submit the form with your browser console open, you should see the output.</p>
+
+  <div class="form">
+    <label for="thing">Thing:</label>
+    <input name="thing" id="thing" #newthing />
+  </div>
+  <div class="field">
+    <label for="reason">reason:</label>
+    <input name="reason" id="reason" #newreason />
+  </div>
+  <button (click)="formExampleFunction(newthing, newreason)"
+          class="myFormButton">
+    Submit stupid form
+  </button>
+</div>
